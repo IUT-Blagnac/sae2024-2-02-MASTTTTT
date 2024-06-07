@@ -23,19 +23,29 @@ def RLE(chaine : str) :
 
     return chaineCompress
 
-def RLE(chaine : str, iteration : int) :
+def RLE_rec(chaine : str, iteration : int) :
     if iteration == 0 :
-        return ""
+        return chaine
     else :
-        return     
-    return chaineCompress
+        return RLE_rec(RLE(chaine), iteration-1)
+    
 
-print(RLE("aaabccd"))
-print(RLE("abc"))
+def unRLE(chaine : str) :
+    #Initialisation d'une chaine
+    chaineDecompress = ""
 
-print(RLE("abbccc"))
+    #On parcourt la chaine de 2 en 2 (pour chaque couple compteur/caractère)
+    for i in range(0, len(chaine), 2) :
+        #On récupère le compteur devant le caractère...
+        cptChar = int(chaine[i])
+        #... et on ajoute le caractère le nombre de fois nécessaire (=compteur)
+        chaineDecompress += chaine[i+1]*cptChar
+    
+    return chaineDecompress
 
-print(RLE("aaabaa"))
-print(RLE("aAa"))
-print(RLE("WWWWWWWWWWWWW"))
-print(RLE("WWWWWWWWWBWWWWWWWWBBBWWWBWWWWWWW"))
+
+def unRLE_rec(chaine : str, iteration : int) :
+    if iteration == 0 or chaine[0] not in ["0","1","2","3","4","5","6","7","8","9"] :
+        return chaine
+    else :
+        return unRLE_rec(unRLE(chaine), iteration-1)
