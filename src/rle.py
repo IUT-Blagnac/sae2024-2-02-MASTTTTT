@@ -10,18 +10,23 @@ def RLE(chaine : str) :
         #Compteur à 1 pour le caractère courant
         cptChar = 1
 
-        #Si le suivant est égale au courant et qu'il existe dans la chaine, et que le compteur ne dépasse pas 9...
-        while i+1 < len(chaine) and chaine[i] == chaine[i+1] and cptChar < 9:
-            #...on incrémente le compteur et l'indice
+        #Tant que le suivant est égale au courant et qu'il existe dans la chaine, et que le compteur ne dépasse pas 9...
+        while i+cptChar < len(chaine) and chaine[i] == chaine[i+cptChar] and cptChar < 9:
+            #...on incrémente le compteur 
             cptChar += 1
-            i += 1
 
-        #On ajoute à la chaine compressée le compteur et le caractére
+        #On ajoute à la chaine compressée le compteur et le caractère
         chaineCompress += str(cptChar) + chaine[i]
-        #On passe au prochain caractère
-        i += 1
+        #On passe au prochain caractère différent
+        i += cptChar
 
     return chaineCompress
+
+print(RLE("abc"))
+print(RLE("abbccc"))
+print(RLE("aaabaa"))
+print(RLE("aAa"))
+print(RLE("WWWWWWWWWWWWW"))
 
 def RLE_rec(chaine : str, iteration : int) :
     if iteration == 0 :
