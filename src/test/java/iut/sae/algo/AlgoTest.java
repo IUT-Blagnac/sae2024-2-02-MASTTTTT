@@ -96,4 +96,12 @@ public class AlgoTest extends TestCase{
       }
    }
 
+   @Test
+   public void test50(){
+      try {
+         assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 100),100));
+      } catch (AlgoException e) {
+         e.printStackTrace();
+      }
+   }
 }
