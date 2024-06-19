@@ -1,0 +1,89 @@
+= Rapport évalutation des algorithmes
+:toc-title: Table des matières
+:toc: macro
+
+* Par : GUILLUY Matt +
+
+* TD group : 
+- [ ] 1
+- [x] 2
+- [ ] 3
+- [ ] 4
+
+* Juin 2024 +
+
+* Projet : SAE Algo. (S2.02) +
+
+'''
+
+&#160;
+
+toc::[]
+
+&#160;
+
+'''
+* LAST NAME : GUILLUY
+* First name : Matt
+* TD group : 
+- [ ] 1
+- [x] 2
+- [ ] 3
+- [ ] 4
+
+---
+
+== Critères d'évalutations
+
+&#160;
+
+Simplicité::
+  Il s'agit d'un code facile à maintenir, lisible par des humains.  Pas forcément efficace, mais très facile à lire et à réutiliser. Toute méthode de `java.util` existante est autorisée.
+
+Efficacité::
+  Peu importe le code source, c'est l'efficacité de son exécution qui est recherchée (complexité maîtrisée, temps d'exécution minimal, ...). 
+Ici aucune méthode complexe (de type `split()` ou `sort()`) ne devra être utilisée (contrairement à celles de type `size()` ou `length()` qui sont autorisées).
+
+Sobriété numérique::
+  L'algorithme consomme le moins de ressources possible (mémoire, calcul, ...).
+
+&#160;
+
+== Classement des algorithmes
+
+&#160;
+
+=== Catégorie Simplicité
+
+[cols="2, 2 , 4",options=header]
+|===
+| Algorithme         | Classement | Justification
+| xxsimplicite.xx | 1 | 
+| xxsimplicite.xx | 2 | 
+| xxsimplicite.xx | 3 | 
+| xxsimplicite.xx | 4 | 
+| xxsimplicite.xx | 5 | 
+|===
+
+&#160;
+
+=== Catégorie Efficacité
+|===
+| Algorithme         | Classement | Justification
+| xxefficacite.xx | 1 | 
+| xxefficacite.xx | 2 | 
+| xxefficacite.xx | 3 | 
+| xxefficacite.xx | 4 | 
+| xxefficacite.xx | 5 | 
+|===
+
+&#160;
+
+=== Catégorie Sobriété
+|===
+| Algorithme         | Classement | Justification
+| xxsobriete.xx | 1 | 
+| xxsobriete.xx | 2 | 
+| xxsobriete.xx | 3 | 
+| xxsobriete.xx | 4 | 
+|===
