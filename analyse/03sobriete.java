@@ -1,5 +1,6 @@
 package iut.sae.algo;
 
+// ne passe pas les tests junits.
 /*
  * Cette classe fournit des méthodes pour effectuer le codage et le décodage par la méthode Run-Length Encoding (RLE) sur des chaînes de caractères.
  */

@@ -84,12 +84,14 @@ Pour chaque classe, les complexités de chaque algorithme sont globalement équi
 &#160;
 
 === Catégorie Sobriété
+
+Pour cette catégorie, JoularJx n'a pas été utilisé en raison de soucis techniques. C'est pourquoi le classement est uniquement basé sur une complexité spatiale par rapport aux outils et à la façon dont les algorithmes ont été réfléchis.
 |===
 | Classe         | Classement | Justification
-| xxsobriete.xx | 1 | 
-| xxsobriete.xx | 2 | 
-| xxsobriete.xx | 3 | 
-| xxsobriete.xx | 4 | 
+| 41sobriete.java | 1 | Ces algorithmes sont moins gouurmands en ressources. Premièrement en évitant l'utilisation de String (objet complexe). En effet, un StringBuilder est utilisé (pour la concaténation) ainsi qu'un tableau de caractères. De plus RLE(String in, int iterations) utilise une approche iterative plutôt que récursive. Ceci permet avec de grandes itérations, d'éviter une surcharge de la pile d'appel. 
+| 27sobriete.java | 2 | Cette classe utilise une chaine de caractère avec ses algorithmes. Or la concaténation avec "+" d'une chaine est une opération complexe, plus gourmande qu'avec un outil tel que le StringBuilder. De plus, la classe utilise une approche récursive pouvant surcharger la pile d'appel en cas de grande itérations.
+| 03sobriete.java | 4 | Ne passe pas les tests JUnits.
+| 57sobriete.java | 4 | Ne passe pas non plus les tests JUnits. (même erreur)
 |===
 
 &#160;
