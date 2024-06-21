@@ -1,6 +1,3 @@
-
-
-
 public class simplicite{
     public static String RLE(String in){
         String newChaine= "";

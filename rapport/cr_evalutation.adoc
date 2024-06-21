@@ -57,33 +57,59 @@ Sobriété numérique::
 
 [cols="2, 2 , 4",options=header]
 |===
-| Algorithme         | Classement | Justification
-| xxsimplicite.xx | 1 | 
-| xxsimplicite.xx | 2 | 
-| xxsimplicite.xx | 3 | 
-| xxsimplicite.xx | 4 | 
-| xxsimplicite.xx | 5 | 
+| Classe         | Classement | Justification
+| 39simplicite.py | 1 | Noms des variables précis et uniforme (tous dans la même langue et identique d'un algorithme à l'autre). Utilisation de commentaires, bien que parfois trop. Espacement du code et peu de lignes de code. De plus utilisation de python simplifiant grandement la lisibité.
+| 44simplicite.java | 2 | Les variables sont nommées correctement et de manière uniforme. Le langage java implique l'utilisation de méthode qui paraissent plus complexe qu'en python notamment. Mais le code est commenté et les commentaires sont pertinents. Espacement des lignes de codes et des éléments à l'intérieur des conditions (for (int i = 0...)). Code compact malgré que certaine moyen utilisé ne sont pas forcément les plus simples (unRLE(Strint in)).
+| 27simplicite.java | 3 | Les variables changent de langue selon si l'algorithme et récursif ou non. Dans l'ensemble les noms de variables restent adaptés. Manque d'espacement notamment pour les différentes conditions ou la structuration du code. Néanmoins les commentaires sont pertinents et le code est très compact.
+| 28simplicite.py | 4 | Passe les tests pour RLE et RLE_recursive. Mais non complet et sans commentaire.
+| 51simplicite.py | 5 | Ne passe pas les tests, seul le RLE simple est présent. De plus aucun commentaire.
 |===
 
 &#160;
 
 === Catégorie Efficacité
+
+Pour chaque classe, les complexités de chaque algorithme sont globalement équivalente (O(n), O(nk)...). Le classemnt est donc principalement basé sur la capacité à fournir un résultat avec de grandes itérations (et le plus vite possible).
+
 |===
-| Algorithme         | Classement | Justification
-| xxefficacite.xx | 1 | 
-| xxefficacite.xx | 2 | 
-| xxefficacite.xx | 3 | 
-| xxefficacite.xx | 4 | 
-| xxefficacite.xx | 5 | 
+| Classe         | Classement | Justification
+| 61efficacite.py | 1 | Cette classe passe tout les tests et ses algorithmes possèdent les meilleurs temps d'éxécutions parmi les classes qui respectent les conditions. L'appel de unRLE_recursif() sur RLE_recursif peut contenir jusqu'à 40 à 50 itérations.
+| 49efficacite.java | 2 | Tout comme 61efficacite.py, la classe passe les tests, néamoins les temps d'éxécutions sont moins compétitifs.
+| 36efficacite.java | 3 | Les tests passents sur les méthodes de cette classe. Or, une erreur "index out of range" surgit à l'appel de unRLE(RLE("SAE", 40), 40). Les temps d'éxécutions sur des plus petites itérations sont plutôt rapides.
+| 59efficacite.java | 4 | Bien que les algorithmes semblent les plus efficaces. RLE(String in) ne passe pas tout les tests. Il est donc 4ème du classement car il ne respecte pas la condition principale... (1ère position sinon)
+| 17efficacite.java | 5 | L'algorithme RLE passe bel et bien les tests. Les autres algorithmes (récursif et unRLE) n'étant pas présent, il est en dernière position du classement.
 |===
+
 
 &#160;
 
 === Catégorie Sobriété
 |===
-| Algorithme         | Classement | Justification
+| Classe         | Classement | Justification
 | xxsobriete.xx | 1 | 
 | xxsobriete.xx | 2 | 
 | xxsobriete.xx | 3 | 
 | xxsobriete.xx | 4 | 
 |===
+
+&#160;
+
+== Utilisation des tests
+
+Cette partie va permettre de retrouver les éléments m'ayant permis de faire le classement (notamment efficacité par le temps de calcul). Les méthodes de tests étant différentes d'un langage à l'autre, voici comment j'ai procédé :
+
+&#160;
+
+=== JAVA
+
+Pour faire passer des tests en Java, Il suffit dans un premier temps de récupérer les algorithmes dans la classe souhaité, dans le dossier analyse. 
+Une fois récupéré, il suffit de se rendre dans le src/main est de remplacer le code dans Algo.java par celui récupéré. Les tests peuvent maintenant être réalisé depuis AlgoTest.java. +
+Les noms de méthodes ne devrait pas posé de problèmes étant donné que la classe Algo.java était donné.
+
+&#160;
+
+=== PYTHON
+
+Pour python, une classe AlgoTest.py à été créer dans src, pour pouvoir réutiliser les tests.
+Tout comme pour les tests Java, il faut dans un premier temps récupérer les algorithmes. Il suffit encore de remplacer dans le src, les algorithmes de Algo.py . Pour lancer les tests, il faut run AlgoTest.py, les résultats apparaîtront dans le terminal. +
+Pour ce langage, attention au nom des méthodes, il a été défini différemment pour chaque personne. Un réarrangement manuel sera peut-être nécessaire.

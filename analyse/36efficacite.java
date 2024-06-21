@@ -1,5 +1,16 @@
 package iut.sae.algo;
 
+// 36efficacite.java
+// complexite : 
+// RLE = O(n) car boucle for
+// RLErec = O(2nk) car au pire chaine avec que caractère diff donc double de taille * nb iteration
+// unRLE = O(9n/2) car limit de la 2eme boucle à 9 / 2 car parcours 2 en 2
+// unRLErec = O((9n/2)*k)
+
+// test10() 5-8ms
+// test30() +=10ms
+// index Out Of Range sur test40; 
+
 public class Algo{
     public static String RLE(String in){
 
@@ -59,5 +70,5 @@ public class Algo{
         }
         return resultat;
     }
-}
 
+}

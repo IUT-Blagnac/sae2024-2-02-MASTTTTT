@@ -1,4 +1,18 @@
-public class efficacite {
+package iut.sae.algo;
+
+// 49efficacite.java
+// complexite : 
+// RLE = O(n) car boucle for
+// RLErec = O(nk) car au pire chaine avec que caractère diff donc double de taille * nb iteration
+// unRLE = O(9n) soit n car limit de la 2eme boucle à 9
+// unRLErec = O(nk)
+
+// test10() +=50ms
+// test30() +=80ms
+// test40() +=40s
+
+public class Algo {
+    
     public static String RLE(String chaineDeCaractere) {
         if (chaineDeCaractere.length() == 0) {
             return "";

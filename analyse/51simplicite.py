@@ -16,3 +16,9 @@ def rle_encode(input_string):
 
     encoded_string.append(f"{count}{current_char}")
     return ''.join(encoded_string)
+
+print(rle_encode("abc"))
+print(rle_encode("abbccc"))
+print(rle_encode("aaabaa"))
+print(rle_encode("aAa"))
+print(rle_encode("WWWWWWWWWWWWW"))

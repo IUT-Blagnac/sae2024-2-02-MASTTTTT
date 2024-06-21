@@ -22,6 +22,7 @@ public class AlgoTest extends TestCase{
       assertEquals("3a1b2a", Algo.RLE("aaabaa"));
       assertEquals("1a1A1a", Algo.RLE("aAa"));
       assertEquals("9W4W", Algo.RLE("WWWWWWWWWWWWW"));
+      assertEquals("9W1B8W3B3W1B7W", Algo.RLE("WWWWWWWWWBWWWWWWWWBBBWWWBWWWWWWW"));
 
    }
 
@@ -97,11 +98,27 @@ public class AlgoTest extends TestCase{
    }
 
    @Test
-   public void test50(){
-      try {
-         assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 100),100));
-      } catch (AlgoException e) {
-         e.printStackTrace();
-      }
+   public void test10() throws AlgoException{
+      assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 10),10));
+   }
+   @Test
+   public void test20() throws AlgoException{
+      assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 20),20));
+   }
+   @Test
+   public void test30() throws AlgoException{
+      assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 20),20));
+   }
+   @Test
+   public void test40() throws AlgoException{
+      assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 40),40));
+   }
+   @Test
+   public void test60() throws AlgoException{
+      assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 60),60));
+   }
+   @Test
+   public void test100() throws AlgoException{
+      assertEquals("SAE", Algo.unRLE(Algo.RLE("SAE", 100),100));
    }
 }

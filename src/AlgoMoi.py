@@ -22,12 +22,6 @@ def RLE(chaine : str) :
 
     return chaineCompress
 
-print(RLE("abc"))
-print(RLE("abbccc"))
-print(RLE("aaabaa"))
-print(RLE("aAa"))
-print(RLE("WWWWWWWWWWWWW"))
-
 def RLE_rec(chaine : str, iteration : int) :
     if iteration == 0 :
         return chaine

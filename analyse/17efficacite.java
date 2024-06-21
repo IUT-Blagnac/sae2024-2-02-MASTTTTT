@@ -1,5 +1,16 @@
-public class Simplicite {
-    public static String runLengthEncode(String chaineEntree) {
+package iut.sae.algo;
+
+//17efficacite.java
+// passe les tests
+// complexite tempo = O(n)
+// complexite spatiale = O()
+
+//abc = 66300ns
+//abbccc = 56700ns
+//WWWWWWWWWWWWW = 66000ns
+
+public class Algo {
+    public static String RLE(String chaineEntree) {
         if (chaineEntree == null || chaineEntree.isEmpty()) {
             return "";
         }
@@ -26,9 +37,16 @@ public class Simplicite {
         chaineCompressee.append(compteur).append(caractereCourant);
         return chaineCompressee.toString();
     }
-
     public static void main(String[] args) {
-        String chaineEntree = "WWWWWWWWWBWWWWWWWWBBBWWWBWWWWWWW";
-        System.out.println(runLengthEncode(chaineEntree));  // Sortie :
+        String chaineEntree = "WWWWWWWWWWWWW";
+
+        long startTime = System.nanoTime();
+        String chaineCompressee = RLE(chaineEntree);
+        long endTime = System.nanoTime();
+
+        long duration = endTime - startTime;
+        
+        System.out.println("Chaine compressée: " + chaineCompressee);
+        System.out.println("Temps d'exécution: " + duration + " nanosecondes");
     }
 }

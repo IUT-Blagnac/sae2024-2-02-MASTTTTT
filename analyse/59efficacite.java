@@ -1,6 +1,22 @@
 package iut.sae.algo;
 
-public class Efficacite {
+// 59efficacite.java
+
+// ne passe pas tout les tests !!! 
+
+// complexite : 
+// RLE = O(n) car boucle for
+// RLErec = O(nk) car RLE O(n) * nb iteration
+// unRLE = O(9n/2) soit n car limit de la 2eme boucle à 9 / 2 car parcours 2 en 2
+// unRLErec = O(nk)
+
+// test10() +=40ms
+// test30() +=50ms
+// test40() +=230ms
+// test60() +=6.2s
+// test100() out of memory
+
+public class Algo {
     /**
      * Effectue une compression RLE (Run-Length Encoding) sur la chaîne d'entrée.
      *
