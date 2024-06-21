@@ -61,7 +61,7 @@ Sobriété numérique::
 | 39simplicite.py | 1 | Noms des variables précis et uniforme (tous dans la même langue et identique d'un algorithme à l'autre). Utilisation de commentaires, bien que parfois trop. Espacement du code et peu de lignes de code. De plus utilisation de python simplifiant grandement la lisibité.
 | 44simplicite.java | 2 | Les variables sont nommées correctement et de manière uniforme. Le langage java implique l'utilisation de méthode qui paraissent plus complexe qu'en python notamment. Mais le code est commenté et les commentaires sont pertinents. Espacement des lignes de codes et des éléments à l'intérieur des conditions (for (int i = 0...)). Code compact malgré que certaine moyen utilisé ne sont pas forcément les plus simples (unRLE(Strint in)).
 | 27simplicite.java | 3 | Les variables changent de langue selon si l'algorithme et récursif ou non. Dans l'ensemble les noms de variables restent adaptés. Manque d'espacement notamment pour les différentes conditions ou la structuration du code. Néanmoins les commentaires sont pertinents et le code est très compact.
-| 28simplicite.py | 4 | Passe les tests pour RLE et RLE_recursive. Mais non complet et sans commentaire.
+| 28simplicite.py | 4 | Passe les tests pour RLE et RLE_recursive. Mais non complet et sans commentaire. Mélange entre variables en anglais et en français. Espacement des lignes de code et des conditions agréable.
 | 51simplicite.py | 5 | Ne passe pas les tests, seul le RLE simple est présent. De plus aucun commentaire.
 |===
 
@@ -73,9 +73,9 @@ Pour chaque classe, les complexités de chaque algorithme sont globalement équi
 
 |===
 | Classe         | Classement | Justification
-| 61efficacite.py | 1 | Cette classe passe tout les tests et ses algorithmes possèdent les meilleurs temps d'éxécutions parmi les classes qui respectent les conditions. L'appel de unRLE_recursif() sur RLE_recursif peut contenir jusqu'à 40 à 50 itérations.
-| 49efficacite.java | 2 | Tout comme 61efficacite.py, la classe passe les tests, néamoins les temps d'éxécutions sont moins compétitifs.
-| 36efficacite.java | 3 | Les tests passents sur les méthodes de cette classe. Or, une erreur "index out of range" surgit à l'appel de unRLE(RLE("SAE", 40), 40). Les temps d'éxécutions sur des plus petites itérations sont plutôt rapides.
+| 61efficacite.py | 1 | Cette classe passe tout les tests et ses algorithmes possèdent les meilleurs temps d'exécutions parmi les classes qui respectent les conditions. L'appel de unRLE_recursif() sur RLE_recursif peut contenir jusqu'à 40 à 50 itérations.
+| 49efficacite.java | 2 | Tout comme 61efficacite.py, la classe passe les tests, néanmoins les temps d'exécutions sont moins compétitifs.
+| 36efficacite.java | 3 | Les tests passent sur les méthodes de cette classe. Or, une erreur "index out of range" surgit à l'appel de unRLE(RLE("SAE", 40), 40). Les temps d'exécutions sur des plus petites itérations sont plutôt rapides.
 | 59efficacite.java | 4 | Bien que les algorithmes semblent les plus efficaces. RLE(String in) ne passe pas tout les tests. Il est donc 4ème du classement car il ne respecte pas la condition principale... (1ère position sinon)
 | 17efficacite.java | 5 | L'algorithme RLE passe bel et bien les tests. Les autres algorithmes (récursif et unRLE) n'étant pas présent, il est en dernière position du classement.
 |===
@@ -90,8 +90,8 @@ Pour cette catégorie, JoularJx n'a pas été utilisé en raison de soucis techn
 | Classe         | Classement | Justification
 | 41sobriete.java | 1 | Ces algorithmes sont moins gouurmands en ressources. Premièrement en évitant l'utilisation de String (objet complexe). En effet, un StringBuilder est utilisé (pour la concaténation) ainsi qu'un tableau de caractères. De plus RLE(String in, int iterations) utilise une approche iterative plutôt que récursive. Ceci permet avec de grandes itérations, d'éviter une surcharge de la pile d'appel. 
 | 27sobriete.java | 2 | Cette classe utilise une chaine de caractère avec ses algorithmes. Or la concaténation avec "+" d'une chaine est une opération complexe, plus gourmande qu'avec un outil tel que le StringBuilder. De plus, la classe utilise une approche récursive pouvant surcharger la pile d'appel en cas de grande itérations.
-| 03sobriete.java | 4 | Ne passe pas les tests JUnits.
-| 57sobriete.java | 4 | Ne passe pas non plus les tests JUnits. (même erreur)
+| 03sobriete.java | 4 | Ne passe pas les tests JUnits. Grosse suspicion d'IA quand même. 2 StringBuilder utilisé et une boucle while après avoir vérifié les conditions (Sur RLE(String in) ). Sans commentaire, je ne comprends pas totalement.
+| 57sobriete.java | 4 | Ne passe pas non plus les tests JUnits. Ajout d'une méthode append pour vérifier une simple condition (ajoute un appel à la pile d'appel). Utilisation d'un StringBuilder et approche itérative pour les algorithmes avec itérations.
 |===
 
 &#160;
